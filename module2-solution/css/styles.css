@@ -2,13 +2,16 @@
 
 body {
     font-family: 'Open Sans', sans-serif, 'Times New Roman', Times, serif;
+    font-size: 16px;
     background-color: aquamarine;
 }
 
 .title {
     display: block;
     text-align: center;
-    margin: 1em;
+    margin: 24px;
+    font-size: 28px;
+
 }
 
 .cardContainer {
@@ -48,6 +51,7 @@ body {
 
 .cardTitle {
     padding: 6px 24px;
+    font-size: 20px;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
 }
