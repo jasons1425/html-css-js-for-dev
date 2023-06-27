@@ -49,11 +49,28 @@ body {
     flex-direction: row-reverse;
 }
 
-.cardTitle {
+.cardTitleCoral {
     padding: 6px 24px;
     font-size: 20px;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
+    background-color: coral;
+}
+
+.cardTitleWood {
+    padding: 6px 24px;
+    font-size: 20px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: burlywood;
+}
+
+.cardTitleSilk {
+    padding: 6px 24px;
+    font-size: 20px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: cornsilk;
 }
 
 .cardContent{
