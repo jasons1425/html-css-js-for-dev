@@ -39,6 +39,18 @@ $(function () {
         return string;
     };
 
+    var switchMenuToActive = () => {
+        var classes = $("#navHomeButton")[0].className;
+        classes = classes.replace(new RegExp("active", "g"), "");
+        $("#navHomeButton")[0].className = classes;
+
+        classes = $("#navMenuButton")[0].className;
+        if (classes.indexOf("active") == -1){
+            classes += " active";
+            $("#navMenuButton")[0].className = classes;
+        }
+    };
+
     document.addEventListener("DOMContentLoaded", (event) => {
         showLoading("#main-content");
         global.$ajaxUtils.sendGetRequest(
@@ -73,6 +85,7 @@ $(function () {
                 $ajaxUtils.sendGetRequest(
                     categoryHtml,
                     (categoryHtml) => {
+                        switchMenuToActive();
                         var categoriesViewHtml = 
                           buildCategoriesViewHtml(
                             categories,
@@ -112,6 +125,7 @@ $(function () {
                 $ajaxUtils.sendGetRequest(
                     menuItemHtml,
                     (menuItemHtml) => {
+                        switchMenuToActive();
                         var menuItemsViewHtml = buildMenuItemsViewHtml(
                             categoryMenuItems,
                             menuItemsTitleHtml,
